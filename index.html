@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,200;1,400;1,700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="row">
+        <div class="col">
+            <h1>Is your hoard running <strong>low</strong>?</h1> <br>
+            <p>Whether you were pillaged by pesky adventurers or just woke up from a 1000 year slumber, <strong>Dragons for Dragons</strong> is here for YOU. </p>
+        </div>
+    </header>
+    <div class="row mt" role="main">
+        <div class="col mt form-title">
+            <h2>Hoard Support Application</h2>
+            <p>No Dragon should be suffering from an empty hoard.</p>
+        </div>
+        <form action="#" method="post" id="form" class="form col" role="form">
+            <h3>Personal Details</h3>
+            <div class="row col-50 mb">
+                <div class="col-50"> 
+                    <!-- Name -->
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" name="Name" class="form-control" placeholder="Kev'lak" aria-placeholder="Kev'lak" aria-labelledby="name" aria-required="true" required>
+                </div>
+                <div class="col"> 
+                    <!-- Title -->
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" id="title" name="Title" class="form-control" aria-labelledby="title" placeholder="Destroyer of Worlds" aria-placeholder="Destroyer of Worlds" aria-required="false" >
+                </div>
+            </div>
+            <div class="row col-50 mb">
+                <div class="col-50"> 
+                    <!-- Date of "Birth" -->
+                    <label for="birth" class="form-label">Date of Hatching</label>
+                    <input type="date" id="birth" name="Birth" class="form-control" aria-labelledby="birth" aria-required="true" required>
+                </div>
+                <div class="col"> 
+                    <!-- Title -->
+                    <label for="species" class="form-label">Species</label>
+                    <select type="select" id="species" name="species" class="form-select" aria-required="true" required>
+                        <option value="">Select One</option>
+                        <option value="Fire">Fire</option>
+                        <option value="Ice">Ice</option>
+                        <option value="Poison">Poison</option>
+                        <option value="Acid">Acid</option>
+                        <option value="Acid">Other</option>                             
+                    </select>
+                </div>
+            </div>
+            <div>
+                <h3>Create an Account</h3>
+                <p class="form-text">With a DFD account you can track your Hoard Support applications and Evil Minion requests.</p>
+            </div>
+            <div class="row col mb">
+                <div class="col"> 
+                    <!-- Email -->
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="crystalmail@email.com" aria-required="true" required>
+                </div>
+                <div class="col"> 
+                    <!-- Password -->
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Choose a strong password" aria-label="Choose a strong password" aria-describedby="passwordHelp" aria-required="true" required>
+                    <div id="passwordHelp" class="form-text">
+                    This password will be used to log into your DFD Account. 
+                    </div>
+                </div>
+            </div>   
+            <div class="row mb border">
+                <div class="col">
+                    <h3>Loan Request</h3>
+                    <p class="form-text">What kind of support are you looking for?</p>
+                </div>
+                <div class="col">
+                    <div class="col-25"> 
+                        <!-- Loan Amount -->
+                            <label for="gold" class="form-label">Requested Loan Amount</label>
+                            <input type="number" id="gold" class="form-control"  min="1000" max="50000" step="1000" aria-label="Gold amount" aria-describedby="goldHelp"  aria-required="true" required>
+                            <div id="goldHelp" class="form-text">
+                                Please input the amount of gold you would like to borrow. Minimum 1000gp increments.  Enter only numeric characters without commas or decimals.
+                            </div>  
+                    </div>
+                        <div class="col-75">
+                            <!-- Repayment Structure -->
+                            <fieldset aria-required="true">
+                                <legend class="form-label">Prefered Repayment Structure</legend>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="payment" id="weekly" value="weekly" required>
+                                    <label class="form-check-label" for="weekly">
+                                    Weekly
+                                    </label>
+                                </div>
+                                <div class="form-check">    
+                                    <input class="form-check-input" type="radio" name="payment" id="biweekly" value="bi-weekly">
+                                    <label class="form-check-label" for="biweekly">
+                                    Bi-Weekly
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="payment" id="monthly" value="monthly">
+                                    <label class="form-check-label" for="monthly">
+                                    Monthly
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="payment" id="semimonthly" value="semi-monthly">
+                                    <label class="form-check-label" for="semimonthly">
+                                    Semi-Monthly
+                                    </label>
+                                </div> 
+                            </fieldset>
+                        </div>                       
+                </div>                           
+            </div>
+            <div class="row mt">
+                <div class="col">
+                    <!-- Reason for loan -->
+                    <label for="reason" class="form-label">Why are you applying?</label>
+                    <textarea class="form-control" id="reason" rows="5"  placeholder="Optional: If you are comfortable, let us know why you are applying for this loan. This information is not considered when determining eligibility." aria-placeholder="Optional: If you are comfortable, let us know why you are applying for this loan. This information is not considered when determining eligibility." aria-required="false"></textarea> 
+                </div>
+            </div>
+            <div class="row mb">
+                <div class="col-75">
+                        <!-- Opt-In Bonus -->
+                        <input type="checkbox" id="optin" class="form-check-input" aria-required="false" aria-describedby="optinHelp">
+                        <label for="optin" class="form-label">Opt-in</label>
+                        <div id="optinHelp" class="form-text">
+                        Would you like to join the Dragons for Dragons Support Group?<br><a href="#">See more info</a>
+                        </div>
+                </div>
+                <div class="col">         
+                    <!-- Sell Soul -->
+                    <input type="checkbox" id="soul" class="form-check-input" aria-describedby="soulHelp" aria-required="true" required>
+                    <label for="soul" class="form-label">Agree</label>
+                    <div id="soulHelp" class="form-text">
+                    Agree to terms & conditions of DFD Hoard Support<br><a href="#">See more info</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <input class="submit col" type="submit" value="Submit" aria-label="Submit Form" onclick="formValid()">
+                <input class="reset col" type="reset" value="Reset" aria-label="Clear Form">
+            </div>
+        </form>
+    </div> 
+    <footer>
+        <p>This is the footer.</p>
+    </footer>
+</body>
+</html>
